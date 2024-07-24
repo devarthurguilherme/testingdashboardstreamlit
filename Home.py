@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import numpy as np
-from dataset import df
+# from dataset import df
 from graphics import ageGroupCounts
 
 
@@ -20,9 +20,12 @@ tab1, tab2, tab3 = st.tabs(
 with tab1:
     st.subheader("Dataset Drivers")
     st.write('This Dataframa is about ...')
+    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+    st.bar_chart(chart_data)
     # st.dataframe(newDfDrivers)
     # Show Full Dataframe
-    st.dataframe(df)
+    # st.dataframe(df)
 
 # Tab 2
 with tab2:
