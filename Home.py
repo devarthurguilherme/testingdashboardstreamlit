@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from dataset import since1970NewDfDrivers
+# from utils import formatNumber
+from dataset import since1970NewDfDrivers_reset
 # from graphics import ageGroupCounts
 
 
@@ -18,9 +19,9 @@ tab1, tab2, tab3 = st.tabs(
 # Dataframe
 with tab1:
     st.subheader("Dataset Drivers")
-    st.write('This Dataframe is about F1 Pilots ...')
-    # st.dataframe(df, use_container_width=True)
-    st.dataframe(since1970NewDfDrivers, use_container_width=False)
+    st.write('Esta tabela mostra dados de alguns pilotos de F1, tendo como critério os nascidos a partir de 1970.')
+    st.metric('Total de Pilotos', len(since1970NewDfDrivers_reset))
+    st.dataframe(since1970NewDfDrivers_reset, use_container_width=False)
 
 
 # Tab 2

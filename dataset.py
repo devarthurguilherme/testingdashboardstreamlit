@@ -44,6 +44,9 @@ since1970NewDfDrivers = newDfDrivers[newDfDrivers['since_70s']]
 since1970NewDfDrivers = since1970NewDfDrivers[
     ['full_name', 'age', 'nationality']]
 
+since1970NewDfDrivers_reset = since1970NewDfDrivers.reset_index(drop=True)
+since1970NewDfDrivers_reset
+
 # # Create a new Dataframa with selected columns
 # newDfDrivers = dfDrivers[['full_name', 'age', 'nationality']]
 
