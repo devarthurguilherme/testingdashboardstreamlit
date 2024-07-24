@@ -1,24 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from dataset import df
+from dataset import dfDrivers
 # from graphics import ageGroupCounts
 
 
-#################
-
-# df = pd.DataFrame(
-#     [
-#         {"command": "st.selectbox", "rating": 4, "is_widget": True},
-#         {"command": "st.balloons", "rating": 5, "is_widget": False},
-#         {"command": "st.time_input", "rating": 3, "is_widget": True},
-#     ]
-# )
-
-
-#########
-
-# print(type(df))
 # Layout Wide Origin Config
 st.set_page_config(layout='wide')
 
@@ -34,7 +20,7 @@ with tab1:
     st.subheader("Dataset Drivers")
     st.write('This Dataframa is about ...')
     # st.dataframe(df, use_container_width=True)
-    st.dataframe(df, use_container_width=True)
+    st.dataframe(dfDrivers, use_container_width=True)
 
 
 # Tab 2

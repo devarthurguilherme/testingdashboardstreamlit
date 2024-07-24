@@ -2,12 +2,26 @@ import pandas as pd
 # from helperFunctions import calculateAge
 import json
 
-file = open('myData/myVendas.json')
-data = json.load(file)
+# file = open('myData/myVendas.json')
+# data = json.load(file)
 
-df = pd.DataFrame.from_dict(data)
-print(df)
-file.close()
+# df = pd.DataFrame.from_dict(data)
+# # print(df)
+# file.close()
+
+file2 = open('myData/drivers.json')
+data2 = json.load(file2)
+
+dfDrivers = pd.DataFrame.from_dict(data2)
+print(dfDrivers)
+file2.close()
+
+
+# # Lê o arquivo CSV
+# df = pd.read_csv('myData/drivers.csv')
+
+# # Converte o DataFrame para JSON no formato desejado
+# df.to_json('myData/drivers.json', orient='records', lines=False)
 
 # csvFilePath = ".\myData\drivers.csv"
 
