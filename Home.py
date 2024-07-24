@@ -1,7 +1,14 @@
 import streamlit as st
-import numpy as np
+import pandas as pd
+# import numpy as np
 # from dataset import newDfDrivers
 # from graphics import ageGroupCounts
+
+csvFilePath = ".\myData\drivers.csv"
+
+
+# import dataframe
+dfDrivers = pd.read_csv(csvFilePath)
 
 
 # Layout Wide Origin Config
@@ -19,6 +26,8 @@ with tab1:
     st.subheader("Dataset Drivers")
     st.write('This Dataframa is about ...')
     # st.dataframe(newDfDrivers)
+    # Show Full Dataframe
+    st.dataframe(dfDrivers)
 
 # Tab 2
 with tab2:
