@@ -5,24 +5,24 @@ import json
 # from dataset import newDfDrivers
 # from graphics import ageGroupCounts
 
-csvFilePath = ".\myData\drivers.csv"
+# csvFilePath = ".\myData\drivers.csv"
 
 
-# import dataframe
-dfDrivers = pd.read_csv(csvFilePath)
+# # import dataframe
+# dfDrivers = pd.read_csv(csvFilePath)
 
-# test
-file = open(
-    'myData\myVendas.json')
-data = json.load(file)
+# # test
+# file = open(
+#     'myData\myVendas.json')
+# data = json.load(file)
 
-df = pd.DataFrame.from_dict(data)
+# df = pd.DataFrame.from_dict(data)
 
 # Format Data
-df['Data da Compra'] = pd.to_datetime(df['Data da Compra'], format='%d/%m/%Y')
+# df['Data da Compra'] = pd.to_datetime(df['Data da Compra'], format='%d/%m/%Y')
 
-# print(df)
-file.close()
+# # print(df)
+# file.close()
 
 
 # Layout Wide Origin Config
@@ -41,7 +41,7 @@ with tab1:
     st.write('This Dataframa is about ...')
     # st.dataframe(newDfDrivers)
     # Show Full Dataframe
-    st.dataframe(df)
+    # st.dataframe(df)
 
 # Tab 2
 with tab2:
