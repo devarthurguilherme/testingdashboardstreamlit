@@ -7,7 +7,7 @@ csvFilePath = ".\myData\drivers.csv"
 
 
 # import dataframe
-dfDrivers = pd.read_csv(csvFilePath)
+# dfDrivers = pd.read_csv(csvFilePath)
 
 # test
 file = open(
