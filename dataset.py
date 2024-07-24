@@ -1,8 +1,28 @@
 import pandas as pd
 from helperFunctions import calculateAge
+import json
+
 
 csvFilePath = ".\myData\drivers.csv"
 
+
+# import dataframe
+dfDrivers = pd.read_csv(csvFilePath)
+
+# test
+file = open(
+    'myData\myVendas.json')
+data = json.load(file)
+
+df = pd.DataFrame.from_dict(data)
+
+# Format Data
+df['Data da Compra'] = pd.to_datetime(df['Data da Compra'], format='%d/%m/%Y')
+
+# print(df)
+file.close()
+
+csvFilePath = ".\myData\drivers.csv"
 
 # import dataframe
 dfDrivers = pd.read_csv(csvFilePath)
