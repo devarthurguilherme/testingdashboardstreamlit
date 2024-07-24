@@ -1,7 +1,8 @@
 import pandas as pd
-# from helperFunctions import calculateAge
+from helperFunctions import calculateAge
 import json
 
+# Test
 # file = open('myData/myVendas.json')
 # data = json.load(file)
 
@@ -13,21 +14,30 @@ file2 = open('myData/drivers.json')
 data2 = json.load(file2)
 
 dfDrivers = pd.DataFrame.from_dict(data2)
-print(dfDrivers)
+# print(dfDrivers)
 file2.close()
 
 
 # Filter
 # Complete Name
 dfDrivers['full_name'] = dfDrivers['forename'] + ' ' + dfDrivers['surname']
-print(dfDrivers['full_name'])
+# print(dfDrivers['full_name'])
 
-# # Convert 'dob' to datetime
-# dfDrivers['dob'] = pd.to_datetime(dfDrivers['dob'])
+# Convert 'dob' to datetime
+dfDrivers['dob'] = pd.to_datetime(dfDrivers['dob'])
+print(dfDrivers['dob'])
 
+# Just Pilots Since 1970
+limiteDate = pd.to_datetime('1970-01-01')
 
-# # Apply Age Function
+# Create Column and Filter Since 1970
+dfDrivers['since_70s'] = dfDrivers['dob'] >= limiteDate
+print(len(dfDrivers['since_70s']))
+newDfDrivers = dfDrivers[['full_name', 'since_70s', 'nationality']]
+
+# Apply Age Function
 # dfDrivers['age'] = dfDrivers['dob'].apply(calculateAge)
+# print(dfDrivers['age'])
 
 # # Create a new Dataframa with selected columns
 # newDfDrivers = dfDrivers[['full_name', 'age', 'nationality']]

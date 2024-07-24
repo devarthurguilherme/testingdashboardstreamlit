@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from dataset import dfDrivers
+from dataset import newDfDrivers
 # from graphics import ageGroupCounts
 
 
@@ -20,7 +20,7 @@ with tab1:
     st.subheader("Dataset Drivers")
     st.write('This Dataframa is about ...')
     # st.dataframe(df, use_container_width=True)
-    st.dataframe(dfDrivers['full_name'], use_container_width=True)
+    st.dataframe(newDfDrivers, use_container_width=True)
 
 
 # Tab 2
