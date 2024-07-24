@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.graph_objects as go
+# import plotly.graph_objects as go
 # from dataset import df
 # from graphics import ageGroupCounts
 
@@ -53,19 +53,6 @@ with tab2:
 
 # Tab 3
 with tab3:
-    # Dados de exemplo
-    categorias = ['A', 'B', 'C']
-    valores = [10, 20, 15]
-
-    # Criar o gráfico de barras
-    fig = go.Figure(data=[go.Bar(x=categorias, y=valores)])
-
-    # Personalizar o layout do gráfico
-    fig.update_layout(
-        title='Gráfico de Barras com Plotly',
-        xaxis_title='Categorias',
-        yaxis_title='Valores'
-    )
-
-    # Mostrar o gráfico no Streamlit
-    st.plotly_chart(fig)
+    st.subheader("First analisys about ...")
+    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+    st.bar_chart(chart_data)
