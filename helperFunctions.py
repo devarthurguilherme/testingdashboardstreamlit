@@ -11,9 +11,8 @@ def calculateAge(birthdate):
         ((today.month, today.day) < (birthdate.month, birthdate.day))
     return age
 
-
+# Create a Function to Convert
 # # Lê o arquivo CSV
 # df = pd.read_csv('myData/drivers.csv')
-
 # # Converte o DataFrame para JSON
 # df.to_json('myData/drivers.json', orient='records', lines=False)

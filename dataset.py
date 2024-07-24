@@ -25,19 +25,24 @@ dfDrivers['full_name'] = dfDrivers['forename'] + ' ' + dfDrivers['surname']
 
 # Convert 'dob' to datetime
 dfDrivers['dob'] = pd.to_datetime(dfDrivers['dob'])
-print(dfDrivers['dob'])
+
 
 # Just Pilots Since 1970
 limiteDate = pd.to_datetime('1970-01-01')
 
 # Create Column and Filter Since 1970
 dfDrivers['since_70s'] = dfDrivers['dob'] >= limiteDate
-print(len(dfDrivers['since_70s']))
-newDfDrivers = dfDrivers[['full_name', 'since_70s', 'nationality']]
+# print(len(dfDrivers['since_70s']))
+
 
 # Apply Age Function
-# dfDrivers['age'] = dfDrivers['dob'].apply(calculateAge)
+dfDrivers['age'] = dfDrivers['dob'].apply(calculateAge)
 # print(dfDrivers['age'])
+newDfDrivers = dfDrivers[['full_name', 'age', 'since_70s', 'nationality']]
+
+since1970NewDfDrivers = newDfDrivers[newDfDrivers['since_70s']]
+since1970NewDfDrivers = since1970NewDfDrivers[
+    ['full_name', 'age', 'nationality']]
 
 # # Create a new Dataframa with selected columns
 # newDfDrivers = dfDrivers[['full_name', 'age', 'nationality']]
