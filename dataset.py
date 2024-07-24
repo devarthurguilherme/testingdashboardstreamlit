@@ -17,39 +17,10 @@ print(dfDrivers)
 file2.close()
 
 
-# # Lê o arquivo CSV
-# df = pd.read_csv('myData/drivers.csv')
-
-# # Converte o DataFrame para JSON no formato desejado
-# df.to_json('myData/drivers.json', orient='records', lines=False)
-
-# csvFilePath = ".\myData\drivers.csv"
-
-
-# import dataframe
-# dfDrivers = pd.read_csv(csvFilePath)
-
-# test
-# file = open(
-#     'myData\myVendas.json')
-# data = json.load(file)
-
-# df = pd.DataFrame.from_dict(data)
-
-# # Format Data
-# df['Data da Compra'] = pd.to_datetime(df['Data da Compra'], format='%d/%m/%Y')
-
-# # print(df)
-# file.close()
-
-# csvFilePath = ".\myData\drivers.csv"
-
-# # import dataframe
-# dfDrivers = pd.read_csv(csvFilePath)
-
-# # Filter
-# # Complete Name
-# dfDrivers['full_name'] = dfDrivers['forename'] + ' ' + dfDrivers['surname']
+# Filter
+# Complete Name
+dfDrivers['full_name'] = dfDrivers['forename'] + ' ' + dfDrivers['surname']
+print(dfDrivers['full_name'])
 
 # # Convert 'dob' to datetime
 # dfDrivers['dob'] = pd.to_datetime(dfDrivers['dob'])

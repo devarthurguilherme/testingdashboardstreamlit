@@ -12,11 +12,8 @@ def calculateAge(birthdate):
     return age
 
 
-# Lê o arquivo CSV
-with open('myData/drivers.csv', mode='r') as csv_file:
-    csv_reader = csv.DictReader(csv_file)
-    data = list(csv_reader)
+# # Lê o arquivo CSV
+# df = pd.read_csv('myData/drivers.csv')
 
-# Converte e escreve o arquivo JSON
-with open('myData/drivers.json', mode='w') as json_file:
-    json.dump(data, json_file, indent=4)
+# # Converte o DataFrame para JSON
+# df.to_json('myData/drivers.json', orient='records', lines=False)

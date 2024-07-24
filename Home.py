@@ -20,7 +20,7 @@ with tab1:
     st.subheader("Dataset Drivers")
     st.write('This Dataframa is about ...')
     # st.dataframe(df, use_container_width=True)
-    st.dataframe(dfDrivers, use_container_width=True)
+    st.dataframe(dfDrivers['full_name'], use_container_width=True)
 
 
 # Tab 2
